@@ -1,0 +1,18 @@
+*{
+
+    background:black;
+}
+
+#HHMMSS{
+    border:5px solid red;
+    background-color: yellow;
+    color:black;
+    display: inline;
+}
+
+#current-time{
+    border:5px solid green;
+    background-color: yellow;
+    color:black;
+    display: inline;
+}

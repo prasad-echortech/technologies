@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body onload="checkCookies()">
+
+<h2>JavaScript HTML Events</h2>
+
+<p id="demo"></p>
+
+<script>
+function checkCookies() {
+  var status = "";
+  if (navigator.cookieEnabled == true) {
+    status = "Cookies are enabled.";
+  } else {
+    status = "Cookies are not enabled.";
+  }
+  document.getElementById("demo").innerHTML = status;
+}
+</script>
+
+</body>
+</html> 

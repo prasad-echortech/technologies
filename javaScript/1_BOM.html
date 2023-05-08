@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<body>
+    <h1 id="header"></h1>
+    <p id=header2></p>
+</body>
+<script>
+    //window.document.getElementById('header').innerHTML = "IAM ****BOM****";
+    // document.getElementById('header').innerHTML = "IAM ****BOM****";
+    window.document.getElementById('header').innerHTML = `Browser inner window width:${window.innerWidth}px <br><br>Browser inner window height:${window.innerHeight}px`;
+
+//     Some other methods:
+
+// window.open() - open a new window
+// window.close() - close the current window
+// window.moveTo() - move the current window
+// window.resizeTo() - resize the current window
+
+//document.getElementById('header2').innerHTML =`iam a new window ${window.open()}` ;
+//document.getElementById('header2').innerHTML =`iam a new window ${window.close()}` ;
+//document.getElementById('header2').innerHTML =`iam a new window ${window.moveTo()}` ;
+document.getElementById('header2').innerHTML =`iam a new window ${window.resizeTo()}` ;
+</script>
+</html>
+
+<!-- all window methods -->
+<!-- https://www.w3schools.com/jsref/obj_window.asp -->

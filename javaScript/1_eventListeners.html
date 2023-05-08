@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventListeners</title>
+</head>
+<!-- The addEventListener() method attaches an event handler to the specified element.
+
+The addEventListener() method attaches an event handler to an element without overwriting existing event handlers.
+
+You can add many event handlers to one element.
+
+You can add many event handlers of the same type to one element, i.e two "click" events.
+
+You can add event listeners to any DOM object not only HTML elements. i.e the window object.
+
+The addEventListener() method makes it easier to control how the event reacts to bubbling.
+
+When using the addEventListener() method, the JavaScript is separated from the HTML markup, for better readability and allows you to add event listeners even when you do not control the HTML markup.
+
+You can easily remove an event listener by using the removeEventListener() method.-->
+
+<body> 
+    <h2>JavaScript addEventListener()</h2>
+
+    <p>This example uses the addEventListener() method to attach a click event to a button.</p>
+
+    <button id="myBtn">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+document.getElementById('myBtn').addEventListener("click",mydate);
+
+function mydate(){
+    document.getElementById("demo").innerHTML = Date();
+}
+    </script>
+
+
+</body>
+
+</html>

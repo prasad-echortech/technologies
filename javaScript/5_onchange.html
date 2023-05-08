@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onchange</title>
+</head>
+
+<body>
+    <!-- The onchange Event
+The onchange event is often used in combination with validation of input fields.
+Below is an example of how to use the onchange. The upperCase() function will be called when a user changes the content of an input field. -->
+
+<h2>JavaScript HTML Events</h2>
+Enter your name: <input type="text" id="fname" onchange="uppercase()">
+Enter your name: <input type="text" id="lname" onchange="lowercase()">
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+</body>
+
+<script>
+    function uppercase(){
+const x = document.getElementById('fname');
+x.value = x.value.toUpperCase();
+    }
+
+    function lowercase(){
+const x = document.getElementById('lname');
+x.value = x.value.toLowerCase();
+    }
+</script>
+</html>

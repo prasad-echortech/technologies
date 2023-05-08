@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Usr|Input|Obj|Storing</title>
+</head>
+<body>
+    <!-- <form id = "forms"> -->
+        <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="First Name..."><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" placeholder="Last Name..."><br><br>
+     <button type="submit">Submit</button>
+      </form> 
+
+    <!-- script tag -->
+<!-- <script src="/UsrInputObjStoring.js"></script> -->
+<script>
+    //taking input from user with the help of forms and storing that into object and printing that in console?
+
+// let forms = document.getElementById("forms");
+// forms.style.backgroundColor = "green";
+// forms.style.textAlign = "center";
+
+// let button = document.getElementById('button');
+// button.style.backgroundColor = "red";
+// button.style.color = "white";
+
+//--------------------------------------------------
+
+const form = document.querySelector('form');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fd = new FormData(form);
+    const obj = Object.fromEntries(fd);
+    console.log(obj);
+
+    const json = JSON.stringify(obj);
+localStorage.setItem('form',json);
+
+//another html file
+window.location.href = "success.html";
+})
+</script>
+
+</body>
+</html>
