@@ -1,0 +1,25 @@
+#toc{
+    opacity: 0;
+}
+
+.animate__tada,.animate__backInRight{
+    opacity: 1;
+}
+.link2{
+    animation-delay: 0.15s;
+}
+.link3{
+    animation-delay: 0.15s;
+}
+#img{
+    position: relative;
+    object-fit:center;
+    height:100%;
+}
+#p{
+    position: absolute;
+    color:rgb(195, 18, 18);
+    right: 10px;
+}
+
+ 
