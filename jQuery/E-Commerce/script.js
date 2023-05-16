@@ -5,15 +5,22 @@ fetch('https://fakestoreapi.com/products')
 
         let tableData = "";
         objectData.map((values) => {
-            tableData += ` <tr>
-            <td>${values.title}</td>
-              <td>${values.description}</td>
-              <td>${values.price}</td>
-              <td><img src="${values.image}"/></td>
+            tableData += ` 
+            <img src="${values.image}"/></td>
+           <h5> ${values.title}</h5>
+              <p>${values.description}</p>
+              <p>${values.price}</p>
           </tr>`;
         });
-
-        document.getElementById('table_body').innerHTML = tableData;
+        document.getElementsByClassName('.card').innerHTML = tableData;
+        
     }).catch((err) => {
         console.log(err);
     })
+
+    $(".products").click(function (){
+        fetch('https://fakestoreapi.com/products')
+        .then(res => res.json())
+        .then(console.log);
+    })
+
