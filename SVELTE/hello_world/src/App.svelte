@@ -1,64 +1,78 @@
-<!-- <script>
-	export let name;
-	let birthYear = 1999;
-	let currentYear = 2023;
-	let a = 100;
-	let b = 100;
-</script>
+<script>
+	import Nested from "./Nested.svelte";
+	let name = "sarella sai durga prasad";
+	let age = 23;
+	let education = "Btech";
+	let src =
+		"https://imageproxy.youversionapi.com/1280x1280/https://s3.amazonaws.com/static-youversionapi-com/images/base/58418/1280x1280.jpg";
 
-<main>
-	<h1>age {currentYear - birthYear}</h1>
-	<h1>sum {a + b}</h1>
-	<h1>sub {a - b}</h1>
-	<h1>mul {a * b}</h1>
-	<h1>div {a / b}</h1>
-	<h1>rem {a % b}</h1>
-	<h1>sarella {name}!</h1>
+	let count = 0;
+	$: incrementer = count * 2;
 
-	<p>
-		Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
-		how to build Svelte apps.
-	</p>
-
-</main>
-
-<style>
-	main {
-		text-align: center;
-		max-width: 240px;
-		margin: 0 auto;
+	function incCount() {
+		count += 1;
+		console.log(count);
 	}
-	h1 {
-		color: #ff3e00;
-		text-transform: lowercase;
-		font-size: 1em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
+	$: {
+		console.log("The Count " + count);
+		alert("i said the count is :" + count);
+		if (count >= 5) {
+			alert("count is dangerously high " + count);
 		}
 	}
-</style> -->
 
-<script>
-	let name = "prasad sarella";
-	import nested from "./Nested.svelte";
+	let arr = [1, 2, 3, 4];
+
+	function addNumber() {
+		arr.push(arr.length + 1);
+	}
+
 </script>
 
-<h1>my name is {name.toUpperCase()}</h1>
-<h1>my name is {name.toLowerCase()}</h1>
+<h1>name : {name.toUpperCase()}</h1>
+<h2>age : {age}</h2>
+<h3>Education : {education.toUpperCase()}</h3>
+<div>
+	<img {src} alt="" />
+</div>
+<p>this is a paragraph</p>
+<Nested />
+<div>
+	<button on:click={incCount}>
+		clicked {count} {count === 1 ? "time" : "times"}</button
+	>
 
-<p>this a parahraph</p>
-<p>this is a paragraph nested</p>
+	<p>{count} double {count * 5}</p>
+
+	<button on:click={addNumber}>add A Number</button>
+</div>
+
+<Statements />
 
 <style>
-	
+	* {
+		text-align: center;
+		padding: 0;
+		margin: 0;
+	}
+
+	h1 {
+		color: purple;
+		font-size: 2em;
+	}
+	img {
+		height: 200px;
+	}
 	p {
 		color: red;
 		background-color: black;
-		font-size: 100px;
 	}
-
+	button {
+		color: white;
+		background-color: black;
+		padding: 10px;
+		border-radius: 50px;
+		border: none;
+		margin: 5px;
+	}
 </style>
