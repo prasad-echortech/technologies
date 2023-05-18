@@ -7,7 +7,7 @@ async function pro() {
     let newYorkWeather = new Promise((Resolve, Reject) => {
         setTimeout(() => {
             Resolve("50 Deg");
-        }, 2000)
+        }, 1000)
     })
     console.log("fetching delhi weather please wait");
     let dW = await delhiWeather;
@@ -17,14 +17,18 @@ async function pro() {
     console.log("fetched newYork weather " + nW);
 }
 const cherry = async () => {
-    console.log("Hey I am cherry and I am waiting ")
+    return console.log("Hey I am cherry and I am waiting ")
 }
 const main1 = async () => {
+
     console.log("Welcome to weather control room")
     let a = await pro();
     let b = await cherry();
+    cherry()
+
 }
 main1()
+
 
 // async function myFunction() {
 //     return "hello"
