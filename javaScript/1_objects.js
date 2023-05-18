@@ -10,9 +10,9 @@ const myobj = {
     lastName: "Doe",
     age: 50,
     eyeColor: "blue",
-    fullname : function() {
+    fullname: function () {
         return this.firstName + " " + this.lastName;
-}
+    }
 };
 console.log(myobj.fullname());
 let objfun = myobj.fullname();

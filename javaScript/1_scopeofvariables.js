@@ -1,11 +1,11 @@
-function a(){
+function a() {
     const message = "hello prasad";
-    console.log( message );
+    console.log(message);
 }
 a();
 
-function a1(){
- console.log(message);
+function a1() {
+    console.log(message);
 }
 
 a1();

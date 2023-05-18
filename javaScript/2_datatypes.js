@@ -43,7 +43,7 @@ console.log(typeof language);
 
 
 console.log(population);
-console.log( population = population/2);
+console.log(population = population / 2);
 population++;
 console.log(population);
 const finland = 6000000;

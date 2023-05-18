@@ -24,7 +24,7 @@ lists[3].style.color = "orange";
 
 //changing background color
 
-for(let i = 0; i < lists.length; i++){
+for (let i = 0; i < lists.length; i++) {
     lists[i].style.backgroundColor = "yellow";
 }
 
@@ -61,6 +61,6 @@ ulli[3].style.color = "yellow";
 
 //changing background color
 
-for(let i = 0; i < lists.length; i++){
+for (let i = 0; i < lists.length; i++) {
     lists[i].style.backgroundColor = "#9317A7";
 }
