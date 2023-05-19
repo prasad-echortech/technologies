@@ -59,14 +59,14 @@ function step3(value, callback) {
     console.log(result3);
 }
 */
-/*
+
 // #3 promises
 function step1(value, error) {
     return new Promise((resolve, reject) => {
         if (!error) {
             resolve(value + 10)
         } else {
-            console.log("step1's value : " +value)
+            console.log("step1's value : " + value)
             reject("something went work");
         }
     })
@@ -88,18 +88,18 @@ function step3(value, error) {
         if (!error) {
             resolve(value + 10);
         } else {
-            console.log("step3's value : " +value)
+            console.log("step3's value : " + value)
             reject("something went wrong")
         }
     })
 }
 step1(10, false)
-    .then((result1) => step2(result1, true))
+    .then((result1) => step2(result1, false))
     .then((result2) => step3(result2, false))
     .then((result3) => console.log(result3))
     .catch((error) => console.log(error))
 
-*/
+
 /*
 //promise methods
 //Promise.all([Promises])
@@ -120,7 +120,7 @@ Promise.any([p2,p3]).then((values) => console.log(values));
 fetch("https://api.github.com/users")
 .then((res) => res.json())
 .then((result) => console.log(result));
- 
+
 */
 
 //issues of promises is chaining it is also complex
@@ -170,10 +170,10 @@ myFun(false).then((value , ) => {
 
 
 // #4
-let getData1 = async() => {
-    var data = await "hello World";
-console.log(data);
-}
-console.log(1);
-getData1();
-console.log(2);
+// let getData1 = async() => {
+//     var data = await "hello World";
+// console.log(data);
+// }
+// console.log(1);
+// getData1();
+// console.log(2);
