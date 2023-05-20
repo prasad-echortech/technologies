@@ -59,7 +59,7 @@ function step3(value, callback) {
     console.log(result3);
 }
 */
-
+/*
 // #3 promises
 function step1(value, error) {
     return new Promise((resolve, reject) => {
@@ -98,9 +98,8 @@ step1(10, false)
     .then((result2) => step3(result2, false))
     .then((result3) => console.log(result3))
     .catch((error) => console.log(error))
+*/
 
-
-/*
 //promise methods
 //Promise.all([Promises])
 const p1 = Promise.resolve("like if understood callback");
@@ -110,17 +109,16 @@ const p3 = new Promise((resolve, reject) => {
     setTimeout(resolve, 1000, "subscribe for more updates");
 })
 
-Promise.all([p1,p2,p3]).then((values) => console.log(values));
-Promise.allSettled([p4,p1,p2,p3]).then((values) => console.log(values));
-Promise.race([p3,p2,p1]).then((values) => console.log(values));
-Promise.any([p2,p3]).then((values) => console.log(values));
+Promise.all([p3,p2,p2,p4]).then((values) => console.log(values));
+// Promise.allSettled([p1, p2, p3]).then((values) => console.log(values));
+// Promise.race([p4,p2,p1,p3]).then((values) => console.log(values));
+// Promise.any([p3,p2,p1]).then((values) => console.log(values));
 
+/*
 //fetching data from Api
-
 fetch("https://api.github.com/users")
 .then((res) => res.json())
 .then((result) => console.log(result));
-
 */
 
 //issues of promises is chaining it is also complex
