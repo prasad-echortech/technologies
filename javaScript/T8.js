@@ -15,11 +15,11 @@ $("#bt2").click(function () {
 
 let myinterval1;
 $("#bt3").click(function () {
-   
+
     const fun3 = function (a, b) {
         console.log("iam setTimeout : " + (a + b));
     }
-    myinterval1 = setTimeout(() => fun3(30,40), 1000);
+    myinterval1 = setTimeout(() => fun3(30, 40), 1000);
 });
 
 $("#bt4").click(function () {

@@ -59,7 +59,7 @@ function step3(value, callback) {
     console.log(result3);
 }
 */
-/*
+
 // #3 promises
 function step1(value, error) {
     return new Promise((resolve, reject) => {
@@ -93,12 +93,12 @@ function step3(value, error) {
         }
     })
 }
+
 step1(10, false)
     .then((result1) => step2(result1, false))
     .then((result2) => step3(result2, false))
     .then((result3) => console.log(result3))
     .catch((error) => console.log(error))
-*/
 
 //promise methods
 //Promise.all([Promises])
@@ -109,7 +109,7 @@ const p3 = new Promise((resolve, reject) => {
     setTimeout(resolve, 1000, "subscribe for more updates");
 })
 
-Promise.all([p3,p2,p2,p4]).then((values) => console.log(values));
+Promise.all([p3, p2, p2, p4]).then((values) => console.log(values));
 // Promise.allSettled([p1, p2, p3]).then((values) => console.log(values));
 // Promise.race([p4,p2,p1,p3]).then((values) => console.log(values));
 // Promise.any([p3,p2,p1]).then((values) => console.log(values));
@@ -165,7 +165,6 @@ myFun(false).then((value , ) => {
 // return data
 // }
 // getData().then(data => console.log(data))
-
 
 // #4
 // let getData1 = async() => {

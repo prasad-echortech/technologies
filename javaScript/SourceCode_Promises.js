@@ -10,13 +10,13 @@ class ABC {
         this.state = 'FULLFILLED'
         this.value = value
         if (this.thenFunc) {
-            this.thenFunc(value)
+            // this.thenFunc(value)
             this.store.map((e) => this.value = e(this.value))
+            this.store = [];
         }
     }
 
     reject(err) {
-
         this.state = 'REJECTED'
         this.value = err
         if (this.catchFunc) {
@@ -25,13 +25,14 @@ class ABC {
     }
 
     then(thenFunc) {
-        this.store = [...this.store, thenFunc]
+        this.store = [...this.store, thenFunc];
         this.thenFunc = thenFunc
         if (this.state == 'FULLFILLED') {
             thenFunc(this.value)
         }
         return this
     }
+
     catch(catchFunc) {
         this.catchFunc = catchFunc
         if (this.state == 'REJECTED') {
@@ -52,7 +53,6 @@ class ABC {
         })
     }
 
-
     static all(arr) {
         let values = []
         return new ABC((res, rej) => {
@@ -61,7 +61,6 @@ class ABC {
                     values.push(ele)
                     if (arr.length == values.length) {
                         res(values)
-
                     }
                 }).catch((e) => {
                     rej(err)
@@ -78,13 +77,11 @@ class ABC {
                     values.push(ele)
                     if (arr.length == values.length) {
                         res(values)
-
                     }
                 }).catch((ele) => {
                     values.push(ele)
                     if (arr.length == values.length) {
                         res(values)
-
                     }
                 })
             });
@@ -92,48 +89,47 @@ class ABC {
     }
 
     static race(values) {
-
-        return new ABC((res, rej) => {
-            res(values)
-        })
-
+        if(this.values.state == "FULLFILLED"){
+            return new ABC((res, rej) => {
+                res(values)
+            })
+        }
+        
     }
 }
 
-
 console.log("start");
-a = new ABC((res, rej) => {
+
+a = new ABC((resolve, reject) => {
     console.log('executing');
     setTimeout(() => {
-        res(1)
+        resolve(1)
     }, 1000)
-})
+});
 
-//#chaining
-// a.then((res => res * 2))
-//     .then(res => res + 2)
-//     .then(res => console.log(res + 10))
-
+// #chaining
+a.then((res => res * 2))
+    .then(res => res + 2)
+    .then(res => console.log(res))
 
 let p1 = ABC.Resolve(1);
 let p2 = ABC.Resolve(2);
 let p3 = ABC.Resolve(3);
 let p4 = ABC.Reject(4);
 
-//all
-// ABC.all([p1, p2, p3]).then((values) => {
+// #all
+// ABC.all([p1, p2, p3 , p4]).then((values) => {
 //     console.log(values);
 // })
 
 // #allSettled
-ABC.allSettled([p1, p2, p3, p4]).then((values) => {
-    console.log(values);
-})
-
-// #race
-// ABC.race([p1, p2, p3, p4]).then((value) => {
-//     console.log(value);
+// ABC.allSettled([p1, p2, p3, p4]).then((values) => {
+//    console.log(values);
 // })
 
+// #race
+ABC.race([p1, p2, p3, p4]).then((values) => {
+
+})
 
 console.log('end');                                          

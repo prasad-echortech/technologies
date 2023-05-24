@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // it will return object.prototype
+        //    console.log(Object.prototype);    //object 
+
+        // #1
+        // let b = {};
+        // console.log(Object.getPrototypeOf(b));
+        // console.log(Object.getPrototypeOf(Object.prototype));
+
+        //#2
+        // let b1 = new Object();
+        // console.log(Object.getPrototypeOf(b1));
+        // console.log(Object.getPrototypeOf(Object.prototype));
+
+        //#3
+        // let b2 = new Array();
+        // console.log(Object.getPrototypeOf(b2));
+        // console.log(Object.getPrototypeOf(Array.prototype));
+        // console.log(Object.getPrototypeOf(Object.prototype));
+
+        //#4
+        // let b3 = new String();
+        // console.log(Object.getPrototypeOf(b3));
+        // console.log(Object.getPrototypeOf(String.prototype));
+        // console.log(Object.getPrototypeOf(Object.prototype));
+let sum = new function(params) {
+    
+}
+        console.log(Object.getPrototypeOf(sum));
+    </script>
+</body>
+
+</html>

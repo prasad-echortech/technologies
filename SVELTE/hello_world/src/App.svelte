@@ -1,5 +1,7 @@
 <script>
 	import Nested from "./Nested.svelte";
+	import Images from "./Images.svelte";
+	// import Ktm from "./Ktm.svelte";
 	let name = "sarella sai durga prasad";
 	let age = 23;
 	let education = "Btech";
@@ -13,30 +15,30 @@
 		count += 1;
 		console.log(count);
 	}
-	$: {
-		console.log("The Count " + count);
-		alert("i said the count is :" + count);
-		if (count >= 5) {
-			alert("count is dangerously high " + count);
-		}
-	}
+	// $: {
+	// 	console.log("The Count " + count);
+	// 	alert("i said the count is :" + count);
+	// 	if (count >= 5) {
+	// 		alert("count is dangerously high " + count);
+	// 	}
+	// }
 
 	let arr = [1, 2, 3, 4];
 
 	function addNumber() {
 		arr.push(arr.length + 1);
 	}
-
 </script>
 
 <h1>name : {name.toUpperCase()}</h1>
 <h2>age : {age}</h2>
 <h3>Education : {education.toUpperCase()}</h3>
 <div>
-	<img {src} alt="" />
+	<img {src} alt="Gods Word" />
 </div>
 <p>this is a paragraph</p>
-<Nested />
+
+
 <div>
 	<button on:click={incCount}>
 		clicked {count} {count === 1 ? "time" : "times"}</button
@@ -46,8 +48,13 @@
 
 	<button on:click={addNumber}>add A Number</button>
 </div>
+<div>
+	<Nested/>
+	<Images/>
+	<!-- <Ktm/> -->
 
-<Statements />
+</div>
+
 
 <style>
 	* {
