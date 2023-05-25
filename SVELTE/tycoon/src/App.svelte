@@ -65,9 +65,9 @@
 		<p style="color:blue"><b> {oa.name} {oa.price}</b></p>
 	{/each}
 	<div />
-	
-		<!-- <button on:click={()=> (count = count-1)}>counter {count}</button> -->
-		<button on:click={clickInc}>counter {count}</button>
+
+	<!-- <button on:click={()=> (count = count-1)}>counter {count}</button> -->
+	<button on:click={clickInc}>counter {count}</button>
 </main>
 
 <style>
