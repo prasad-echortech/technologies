@@ -1,0 +1,10 @@
+const moment = require("moment/moment");
+console.log("**********");
+// console.log(moment().format('llll'));
+// console.log(moment().format('YYYY [escaped] YYYY'));
+// console.log(moment().format());
+// console.log(moment("20211212" , "YYYYMMDD").fromNow());
+// console.log(moment().startOf('hour').fromNow());
+// console.log(moment().subtract(1, 'days').calendar());
+// console.log(moment().add(6, 'days').calendar());
+console.log(moment().calendar());
